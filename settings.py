@@ -1,0 +1,3 @@
+SIZE = (WIDTH, HEIGHT) = (640, 400)
+COLOR_BACKGROUND = (0xaf, 0xbf, 0xef)
+COLOR_TRANSPARENT = (0xff, 0xff, 0xff)
