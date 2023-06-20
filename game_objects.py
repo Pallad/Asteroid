@@ -9,7 +9,7 @@ class Player(pygame.sprite.Sprite):
 
     def __init__(self, bullets, clock):
         super(Player, self).__init__()
-        self.image = pygame.image.load(r'assets\player.png')
+        self.image = pygame.image.load(r'assets/player.png')
         self.rect = self.image.get_rect()
         self.rect.centerx = WIDTH / 2
         self.rect.bottom = HEIGHT - 10
@@ -49,7 +49,7 @@ class Player(pygame.sprite.Sprite):
 class Background(pygame.sprite.Sprite):
     def __init__(self):
         super(Background, self).__init__()
-        self.image = pygame.image.load(r'assets\space.png')
+        self.image = pygame.image.load(r'assets/space.png')
         self.rect = self.image.get_rect()
         self.rect.bottom = HEIGHT
 
@@ -74,7 +74,7 @@ class Plasma_bullet(pygame.sprite.Sprite):
 
     def __init__(self, position):
         super(Plasma_bullet, self).__init__()
-        self.image = pygame.image.load(r'assets\plasma_bullet.png')
+        self.image = pygame.image.load(r'assets/plasma_bullet.png')
         self.rect = self.image.get_rect()
         self.rect.midbottom = position
 
@@ -91,7 +91,7 @@ class Asteroid(pygame.sprite.Sprite):
 
     def __init__(self):
         super(Asteroid, self).__init__()
-        self.image = pygame.image.load(r'assets\asteroid{}.png'.format(random.randint(0, 1)))
+        self.image = pygame.image.load(r'assets/asteroid{}.png'.format(random.randint(0, 1)))
         self.rect = self.image.get_rect()
         self.rect.midbottom = (random.randint(0, WIDTH), 0)
 
@@ -117,7 +117,7 @@ class Asteroid(pygame.sprite.Sprite):
 class BadaBoom(pygame.sprite.Sprite):
     def __init__(self, position):
         super(BadaBoom, self).__init__()
-        self.image = pygame.image.load(r'assets\boom.png')
+        self.image = pygame.image.load(r'assets/boom.png')
         self.rect = self.image.get_rect()
         self.rect.midtop = position
 
