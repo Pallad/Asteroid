@@ -24,6 +24,7 @@ def start_game():
     objects.add(player)
 
     active = True
+    game_started = False
 
     while active:
         for event in pygame.event.get():
@@ -33,10 +34,13 @@ def start_game():
         # Respoun asteroid
         Asteroid.respoun(asteroids, clock)
 
-        # Change state player
-        objects.update()
-        bullets.update()
-        asteroids.update()
+        if game_started:
+            # Change state player
+            objects.update()
+            bullets.update()
+            asteroids.update()
+        elif pygame.key.get_pressed()[pygame.K_SPACE]:
+            game_started = True
 
         # Collise
         pygame.sprite.groupcollide(bullets, asteroids, True, True)
